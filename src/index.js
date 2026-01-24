@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom/client";
 import Gallery from "./Gallery.js";
+import Cantante from "./Exercise.js";
 
 //todos los componentes retornan UN elemento html 
 // function App() {
@@ -39,21 +40,28 @@ import Gallery from "./Gallery.js";
 // }
 
 //parte 4 agregar estilos 
-export default function TodoList() {
+// export default function TodoList() {
+//     return(
+//         <ul style={
+//             {
+//                 backgroundColor:'red',
+//                 color:'white',
+//             }
+//         }>
+//             <li>Hacer un git clone</li>
+//             <li>Ir al cine</li>
+//             <li>Crear un Profile</li>
+//         </ul>
+//     );
+// }
+
+
+//Parte 5 Ejercicio
+export default function App() {
     return(
-        <ul style={
-            {
-                backgroundColor:'red',
-                color:'white',
-            }
-        }>
-            <li>Hacer un git clone</li>
-            <li>Ir al cine</li>
-            <li>Crear un Profile</li>
-        </ul>
+        <Cantante />
     );
 }
-
 
 const root = ReactDom.createRoot(
     document.getElementById("root")
@@ -61,6 +69,6 @@ const root = ReactDom.createRoot(
 
 root.render(
     <React.StrictMode>
-        <TodoList />
+        <App />
     </React.StrictMode>
 )
