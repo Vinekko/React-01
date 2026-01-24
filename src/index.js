@@ -31,11 +31,29 @@ import Gallery from "./Gallery.js";
 // }
 
 //parte 3
-export default function App() {
-    return (
-        <Gallery />
+// el componente sutil que le indica a react que es un componente es la mayuscula inicial
+// export default function App() {
+//     return (
+//         <Gallery />
+//     );
+// }
+
+//parte 4 agregar estilos 
+export default function TodoList() {
+    return(
+        <ul style={
+            {
+                backgroundColor:'red',
+                color:'white',
+            }
+        }>
+            <li>Hacer un git clone</li>
+            <li>Ir al cine</li>
+            <li>Crear un Profile</li>
+        </ul>
     );
 }
+
 
 const root = ReactDom.createRoot(
     document.getElementById("root")
@@ -43,6 +61,6 @@ const root = ReactDom.createRoot(
 
 root.render(
     <React.StrictMode>
-        <App />
+        <TodoList />
     </React.StrictMode>
 )
